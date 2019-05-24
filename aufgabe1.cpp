@@ -54,8 +54,11 @@ public:
 
 
 int main(){
+	std::string dateiname;
+	std::cout << "Dateiname" << std::endl;
+	std::cin >> dateiname;
 
-  std::ifstream infile("CR1000_TabWeather_2019_05_01.dat");
+  std::ifstream infile(dateiname);
   std::string line, date;
 
   typedef boost::tokenizer<boost::char_separator<char> > tokenizer;
