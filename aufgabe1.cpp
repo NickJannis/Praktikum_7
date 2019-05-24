@@ -50,6 +50,22 @@ public:
       }
     return stream;
   }
+
+  void getempQ(const double& p){
+  	  std::vector<T> tmpVector(*this);
+  	  std::sort(tmpVector.begin(), tmpVector.end());
+  	  double a = tmpVector.size()*&p;
+  	  double pQ;
+  	  if(a != (double)((int)a))){
+  		  pQ = tmpVector[(int)a+1];
+
+  	  }else{
+  		  pQ = 0.5*(tmpVector[a]+tmpVector[a+1]);
+  	  }
+  	  tmpVector[&p] = pQ;
+
+    }
+
 };
 
 
